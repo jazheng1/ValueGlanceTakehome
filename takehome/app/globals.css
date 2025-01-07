@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--background);
+  background: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  justify-items: center;
+}
+
+.table-name {
+  font-size: 45px;
+  font-weight: bold;
+  padding: 30px;
+}
+
+.income-table, .filters {
+  justify-items: center;
+}
+
+.filter-item{
+  padding: 10px;
+}
+
+input {
+  padding-right: 10px;
+}
+button {
+  background-color: #4A90E2;
+  padding: 10px;
+  border-radius: 10px;
+}
