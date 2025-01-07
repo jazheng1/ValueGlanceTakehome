@@ -1,13 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig = {
-  output: "export",
-  trailingSlash: true, // Required for GitHub Pages
-  images: {
-    unoptimized: true, // Necessary for static export
-  },
-  basePath: "/ValueGlanceTakehome", // Replace with your repository name
+  ...(process.env.NODE_ENV === "production" && {
+    output: "export",
+    trailingSlash: true,
+    images: {
+      unoptimized: true,
+    },
+    basePath: "/ValueGlanceTakehome",
+  }),
 };
 
 module.exports = nextConfig;
-export default nextConfig;
