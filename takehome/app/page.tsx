@@ -75,7 +75,7 @@ export default function Home() {
     const value = parseInt(e.target.value);
 
     if (isNaN(value) || value === null) {
-      newRange[index] = initialDateRange[index]; // Reset to original value
+      newRange[index] = initialDateRange[index];
     } else {
       newRange[index] = value;
     }
@@ -87,7 +87,7 @@ export default function Home() {
     const value = parseInt(e.target.value);
 
     if (isNaN(value) || value === null) {
-      newRange[index] = initialRevenueRange[index]; // Reset to original value
+      newRange[index] = initialRevenueRange[index];
     } else {
       newRange[index] = value;
     }
@@ -99,7 +99,7 @@ export default function Home() {
     const value = parseInt(e.target.value);
 
     if (isNaN(value) || value === null) {
-      newRange[index] = initialNetIncomeRange[index]; // Reset to original value
+      newRange[index] = initialNetIncomeRange[index];
     } else {
       newRange[index] = value;
     }
@@ -198,46 +198,3 @@ export default function Home() {
     </div>
   );
 }
-
-// export default async function Home() {
-//   const data = await getData();
-
-//   const fields = data.length > 0 ? {
-//     Date: data[0].date,
-//     Revenue: data[0].revenue,
-//     'Net Income': data[0].netIncome,
-//     'Gross Profit': data[0].grossProfit,
-//     EPS: data[0].eps,
-//     'Operating Income': data[0].operatingIncome,
-//   } : {};
-
-//   return (
-//     <div>      
-//       <div id="tableData">
-//         <h1 id="tableName">Income Statement Data for AAPL</h1>
-
-//         <table cellPadding="10" style={{ width: "50%"}}>
-//           <thead>
-//             <tr style={{ borderBottom: "1px solid white" }}>
-//               {Object.keys(fields).map((key) => (
-//                 <th  key={key}>{key}</th>
-//               ))}
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {data.map((incomeStatement: IncomeStatement , index: number) => (
-//               <tr key={index}>
-//                 <td>{incomeStatement.date}</td>
-//                 <td>{incomeStatement.revenue.toLocaleString()}</td>
-//                 <td>{incomeStatement.netIncome.toLocaleString()}</td>
-//                 <td>{incomeStatement.grossProfit.toLocaleString()}</td>
-//                 <td>{incomeStatement.eps}</td>
-//                 <td>{incomeStatement.operatingIncome.toLocaleString()}</td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </div>
-//     </div>
-//   );
-// }
